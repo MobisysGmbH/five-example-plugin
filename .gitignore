@@ -1,0 +1,5 @@
+/.babel/
+/dist/
+/node_modules/
+/developer_private.jwk
+/developer_public.jwk

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./prebuild",
+    "target": "es6",
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "declaration": false,
+    "noEmitOnError": true,
+    "useUnknownInCatchVariables": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "pretty": true,
+    "strict": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./test/**"
+  ]
+}
