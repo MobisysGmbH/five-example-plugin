@@ -1,4 +1,4 @@
-const fs = require('node:fs/promises');
+const fs = require('fs-extra');
 const path = require('node:path');
 const childProcess = require('node:child_process');
 const crypto = require('node:crypto');
@@ -19,7 +19,7 @@ return (async function main() {
   let privateKey;
 
   // (opt) create developer key
-  if (!(await fs.stat(privateKeyPath)).isFile()) {
+  if (!(await fs.exists(privateKeyPath))) {
     const kp = await subtle.generateKey({ name: 'ECDSA', namedCurve: 'P-384' }, true, ['sign', 'verify']);
     privateKey = kp.privateKey;
     
